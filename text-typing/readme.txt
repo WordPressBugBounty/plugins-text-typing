@@ -1,10 +1,10 @@
-=== Typing Text - Give your texts many typing effects ===
+=== Typing Text – Add Animated Typing Effects to Headings or Text ===
 Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text typing, typing animation
-Requires at least: 6.2+
-Tested up to: 6.6.2
-Stable tag: 1.0.5
+Requires at least: 6.5+
+Tested up to: 6.8
+Stable tag: 1.0.6
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -38,24 +38,24 @@ Make your text an amazing typing effect in Gutenberg editor.
 - Did you like this plugin? Dislike it? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
 
-### ⭐ Check out the Parent Plugin of this plugin-
+### Check out the Parent Plugin of this plugin-
 
-🔥 **[B Blocks](https://bblockswp.com)** – Best gutenberg blocks collections for WordPress.
+[**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
 
 
-### ⭐ Check out our other WordPress Plugins-
+### Check out our other WordPress Plugins-
 
-🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
+[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
-🔥 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
+[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
 
-🔥 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
+[**Html5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – Listen audios with awesome visuals.
 
-🔥 **[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
+[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
 
-🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
+[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
 
-🔥 **[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
 == Installation ==
@@ -107,27 +107,8 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 1.0.5 - 24 Apr 24 =
-* Fix issue
-
-= 1.0.4 =
-* Not load scripts if block is not used
-
-= 1.0.3 =
-* Add translate feature
-
-= 1.0.2 =
-* Fix Dependency
-
-= 1.0.1 =
-* Reduce PHP Code
-* Performance Improvement
-
-= 1.0.0 =
-* Initial Release
-
-
-== Upgrade Notice ==
+= 1.0.6 - 13 Aug 25 =
+* Increase Performance
 
 = 1.0.5 - 24 Apr 24 =
 * Fix issue
@@ -146,4 +127,4 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Performance Improvement
 
 = 1.0.0 =
-* Initial Release
+* Initial Release.

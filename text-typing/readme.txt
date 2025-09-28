@@ -1,19 +1,19 @@
 === Typing Text – Add Animated Typing Effects to Headings or Text ===
-Contributors: bplugins, abuhayat, charlescormier
+Contributors: bplugins, noornabi2, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text typing, typing animation
 Requires at least: 6.5+
 Tested up to: 6.8
-Stable tag: 1.0.6
+Stable tag: 2.0.0
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Make your text an amazing typing effect.
+Add stunning animated typing effects to your WordPress headings or text.
 
 == Description ==
 
-Make your text an amazing typing effect in Gutenberg editor.
+Bring your content to life with beautiful typing animations – directly inside the Gutenberg editor.
 
 
 **[Demos](https://bblockswp.com/demo/text-typing)**
@@ -23,6 +23,20 @@ Make your text an amazing typing effect in Gutenberg editor.
 - **Prefix and Suffix**: Add prefix and suffix text around the typing.
 - **Options**: Configure the typing such as Type Speed, Start Delay, Back Speed, Back Delay, enable/disable Shuffle, Fade Out Effect, Loop, and Cursor.
 - **Style**: Change the colors and more.
+
+== 🚀 Upgrade to Text Typing Pro ==
+
+- **6+ Stylish Themes**: Unique typing animations to impress visitors.
+- **Custom Colors & Gradients**: Text, cursor, background, with smooth gradient support.
+- **Typing Speed Control**: Adjust typing & backspacing speed.
+- **Loop & Delay Options**: Repeat or pause typing with precise timing.
+- **Cursor Styling**: Change style, size, and color for a personalized look.
+- **Text Shadow Effects**: Add depth, glow, or emphasis.
+- **Prefix & Suffix Text**: Add extra words before or after typing text.
+- **Responsive Settings**: Optimize font size, alignment, and appearance for mobile, tablet, and desktop.
+- **Premium Animations**: Exclusive smooth effects available only in Pro.
+- **Optional Icons for Each Text**: Users can add icons before/after text or skip entirely.
+- **Icon Customization**: Set icon size, color, and style freely.
 
 
 = How to use =
@@ -98,14 +112,27 @@ You can use unlimited times as you want.
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/text-typing)
 
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the Typing Text – Give your texts many typing effects plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fc6ad-dcc3-49a7-a4d5-340a982f51ea). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 
 == Screenshots ==
 
-1. Settings
-2. Text Typing
+1. Gutenberg Setting
+2. Default layout
+3. Terminal
+4. Star Flower
+5. Neon Grid
+6. Aurora glow
+7. Cyber Wave
 
 
 == Changelog ==
+
+= 2.0.0 - 28 Sep 25 =
+* Added pro Features
+* Added ShortCode
 
 = 1.0.6 - 13 Aug 25 =
 * Increase Performance

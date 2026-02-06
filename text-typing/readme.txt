@@ -2,9 +2,9 @@
 Contributors: bplugins, noornabi2, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text typing, typing animation
-Requires at least: 6.5+
+Requires at least: 6.2+
 Tested up to: 6.8
-Stable tag: 2.0.0
+Stable tag: 2.0.4
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,10 +13,14 @@ Add stunning animated typing effects to your WordPress headings or text.
 
 == Description ==
 
-Bring your content to life with beautiful typing animations – directly inside the Gutenberg editor.
+The #1 No-Code Typing Text Block Plugin – Trusted by 3000+ Websites Worldwide
+
+[**Typing Text Block**](https://bplugins.com/products/text-typing/) | [**Documentation**](https://bplugins.com/docs/typing-text/) | [**Pricing**](https://bplugins.com/products/text-typing/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/text-typing/#demos)
+
+[**Typing Text Block**](https://bplugins.com/products/animated-text-block/) is a powerful and easy-to-use WordPress block that lets you create realistic typing text animations without any coding. Perfect for hero sections, banners, headlines, and call-to-action areas, it helps you highlight key messages in an engaging and modern way.
 
 
-**[Demos](https://bblockswp.com/demo/text-typing)**
+**[Buy The Pro](https://bplugins.com/products/text-typing/pricing "Buy Pro version")**
 
 
 = Features =
@@ -42,7 +46,7 @@ Bring your content to life with beautiful typing animations – directly inside 
 = How to use =
 - First, install the Text Typing plugin.
 - Add the Text Typing block from the block category called "Widgets" in the Gutenberg editor.
-- You can change block settings from the right-side settings sidebar.
+- You can change block settings from the right-side settings siedbar.
 - Enjoy!
 
 * For Installation help click on Installation Tab
@@ -130,7 +134,22 @@ Please report security bugs found in the source code of the Typing Text – Give
 
 == Changelog ==
 
-= 2.0.0 - 28 Sep 25 =
+= 2.0.4 - 17 Jan 26 =
+* Dashboard info updated
+
+= 2.0.3 - 16 Nov 25 =
+* freemius latest sdk version updated and demo page created
+* Demo page created for this plugin
+
+= 2.0.2 - 5 Nov 25 =
+* freemius_lite sdk version updated
+
+= 2.0.1 - 04 Oct 25 =
+* Added a modern dashboard
+* Fix the text alignment
+* Add theme options on the align toolbar
+
+= 2.0.0 - 29 Sep 25 =
 * Added pro Features
 * Added ShortCode
 

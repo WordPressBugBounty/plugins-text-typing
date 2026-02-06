@@ -1,11 +1,12 @@
 import React from 'react-dom';
-import AppContainer from './Index';
-import './admin.scss';
+import '../../bpl-tools/Admin/style.scss';
+import App from './App';
+import { dashboardInfo } from './utils/data';
+
 document.addEventListener('DOMContentLoaded', () => {
   const adminEl = document.getElementById('bplAdminHelpPage');
-  const isPremium = adminEl.dataset.ispremium === '1' ? true : false;
+  const info = JSON.parse(adminEl.dataset.info)
 
-  // console.log("I am from dashboard admin:", isPremium);
 
-  React.createRoot(adminEl).render(<AppContainer isPremium={isPremium} />)
+  React.createRoot(adminEl).render(<App {...dashboardInfo(info)} />)
 });

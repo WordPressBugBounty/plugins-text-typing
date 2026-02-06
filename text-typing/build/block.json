@@ -230,7 +230,7 @@
       "type": "object",
       "default": {
         "width": {
-          "desktop": "95%",
+          "desktop": "100%",
           "tablet": "",
           "mobile": ""
         },
@@ -278,7 +278,8 @@
     "typedJS",
     "textillate",
     "wp-api",
-    "wp-api-request"
+    "wp-api-request",
+    "wp-block-editor"
   ],
   "editorStyle": "file:./index.css",
   "style": [

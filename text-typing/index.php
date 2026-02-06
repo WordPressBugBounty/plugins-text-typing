@@ -3,13 +3,13 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.0.0
+ * Version: 2.0.4
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: text-typing
- * @fs_free_only, /bplugins_sdk
+ * @fs_free_only, /freemius-lite
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( function_exists( 'ttb_fs' ) ) {
     ttb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.0' ) );
+    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.4' ) );
     define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'TTB_HAS_FREE', 'text-typing/index.php' === plugin_basename( __FILE__ ) );
@@ -31,7 +31,7 @@ if ( function_exists( 'ttb_fs' ) ) {
             if ( !isset( $ttb_fs ) ) {
                 // Include Freemius SDK.
                 $fsStartPath = dirname( __FILE__ ) . '/freemius/start.php';
-                $bSDKInitPath = dirname( __FILE__ ) . '/bplugins_sdk/init.php';
+                $bSDKInitPath = dirname( __FILE__ ) . '/freemius-lite/start.php';
                 if ( TTB_HAS_PRO && file_exists( $fsStartPath ) ) {
                     require_once $fsStartPath;
                 } else {
@@ -156,7 +156,7 @@ if ( function_exists( 'ttb_fs' ) ) {
 
             // Custom Post Type function calls
             function ttb_text_typing_post_type() {
-                $menuIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-type"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line><line x1="4" y1="13" x2="20" y2="13"></line></svg>';
+                $menuIcon = '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="3em" width="3em" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"></path></svg>';
                 register_post_type( 'text-typing', array(
                     'label'         => 'Text Typing',
                     'labels'        => [
@@ -219,8 +219,8 @@ if ( function_exists( 'ttb_fs' ) ) {
             function addSubmenu() {
                 add_submenu_page(
                     'edit.php?post_type=text-typing',
-                    'Help & Support',
-                    'Help & Support',
+                    'Help & Demo',
+                    'Help & Demo',
                     'manage_options',
                     'ttb_demo_page',
                     [$this, 'ttb_render_demo_page']
@@ -233,25 +233,16 @@ if ( function_exists( 'ttb_fs' ) ) {
             }
 
             function ttb_render_demo_page() {
-                // Safe upgrade URL fallback
-                $upgrade_url = '#';
-                if ( function_exists( 'ttb_fs' ) && method_exists( ttb_fs(), 'get_upgrade_url' ) ) {
-                    $upgrade_url = ttb_fs()->get_upgrade_url();
-                } else {
-                    // fallback: আপনার pro sales page / landing page এর লিংক দিন
-                    $upgrade_url = 'https://bplugins.com/products/text-typing-pro/';
-                }
                 ?>
-				<div id="bplAdminHelpPage"  
-						data-version='<?php 
-                echo esc_attr( TTB_PLUGIN_VERSION );
-                ?>'  
-						data-is-premium='<?php 
-                echo esc_attr( ttbIsPremium() );
-                ?>'
-						data-upgrade-url='<?php 
-                echo esc_url( $upgrade_url );
-                ?>'>
+				<div id="bplAdminHelpPage"
+						data-info="<?php 
+                echo esc_attr( wp_json_encode( [
+                    'version'   => TTB_PLUGIN_VERSION,
+                    'isPremium' => ttbIsPremium(),
+                ] ) );
+                ?>"
+						>
+		
 				</div>
 				<?php 
             }

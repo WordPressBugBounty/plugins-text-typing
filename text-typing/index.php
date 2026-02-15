@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.0.4
+ * Version: 2.0.5
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -19,7 +19,7 @@ if ( function_exists( 'ttb_fs' ) ) {
     ttb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.4' ) );
+    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.5' ) );
     define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'TTB_HAS_FREE', 'text-typing/index.php' === plugin_basename( __FILE__ ) );

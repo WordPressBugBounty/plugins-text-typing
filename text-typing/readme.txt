@@ -2,9 +2,9 @@
 Contributors: bplugins, noornabi2, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text typing, typing animation
-Requires at least: 6.2+
+Requires at least: 6.5+
 Tested up to: 6.8
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -27,6 +27,7 @@ The #1 No-Code Typing Text Block Plugin – Trusted by 3000+ Websites Worldwide
 - **Prefix and Suffix**: Add prefix and suffix text around the typing.
 - **Options**: Configure the typing such as Type Speed, Start Delay, Back Speed, Back Delay, enable/disable Shuffle, Fade Out Effect, Loop, and Cursor.
 - **Style**: Change the colors and more.
+- **Quick Themes Options**: Instantly switch between predefined themes to update the animated text appearance.
 
 == 🚀 Upgrade to Text Typing Pro ==
 
@@ -133,6 +134,11 @@ Please report security bugs found in the source code of the Typing Text – Give
 
 
 == Changelog ==
+
+= 2.0.5 - 15 Feb 26 =
+- **Fixed**: Pro features available on frontend without licenses.
+- **Update**: Pro modal premium quality designed.
+- **New**: Instantly switch between predefined themes to change the typing text appearance.
 
 = 2.0.4 - 17 Jan 26 =
 * Dashboard info updated

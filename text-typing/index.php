@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.0.5
+ * Version: 2.0.6
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -19,7 +19,7 @@ if ( function_exists( 'ttb_fs' ) ) {
     ttb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.5' ) );
+    define( 'TTB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.6' ) );
     define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'TTB_HAS_FREE', 'text-typing/index.php' === plugin_basename( __FILE__ ) );
@@ -160,8 +160,12 @@ if ( function_exists( 'ttb_fs' ) ) {
                 register_post_type( 'text-typing', array(
                     'label'         => 'Text Typing',
                     'labels'        => [
-                        'add_new'        => 'Add New',
-                        'add_new_item'   => 'Add New',
+                        'name'           => 'Text Typing',
+                        'singular_name'  => 'Text Typing',
+                        'menu_name'      => 'Text Typing',
+                        'all_items'      => 'ShortCode Generator',
+                        'add_new'        => 'Add New ShortCode',
+                        'add_new_item'   => 'Add New ShortCode',
                         'edit_item'      => 'Edit Animated',
                         'not_found'      => 'There is no please add one',
                         'item_published' => 'Published',
@@ -220,7 +224,7 @@ if ( function_exists( 'ttb_fs' ) ) {
                 add_submenu_page(
                     'edit.php?post_type=text-typing',
                     'Help & Demo',
-                    'Help & Demo',
+                    'Help & Demos',
                     'manage_options',
                     'ttb_demo_page',
                     [$this, 'ttb_render_demo_page']
@@ -234,15 +238,16 @@ if ( function_exists( 'ttb_fs' ) ) {
 
             function ttb_render_demo_page() {
                 ?>
-				<div id="bplAdminHelpPage"
+				<div id="ttbDashboard"
 						data-info="<?php 
                 echo esc_attr( wp_json_encode( [
-                    'version'   => TTB_PLUGIN_VERSION,
-                    'isPremium' => ttbIsPremium(),
+                    'version'            => TTB_PLUGIN_VERSION,
+                    'isPremium'          => ttbIsPremium(),
+                    'hasPro'             => TTB_HAS_PRO,
+                    'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
                 ] ) );
                 ?>"
 						>
-		
 				</div>
 				<?php 
             }
@@ -269,7 +274,12 @@ if ( function_exists( 'ttb_fs' ) ) {
                     wp_enqueue_script(
                         'ttb-dashboard-help',
                         TTB_DIR_URL . 'build/dashboard.js',
-                        ['react', 'react-dom', 'wp-components'],
+                        [
+                            'wp-element',
+                            'wp-components',
+                            'wp-api',
+                            'wp-util'
+                        ],
                         TTB_PLUGIN_VERSION,
                         true
                     );
@@ -279,12 +289,15 @@ if ( function_exists( 'ttb_fs' ) ) {
                         ['wp-components', 'wp-edit-blocks', 'wp-block-editor'],
                         TTB_PLUGIN_VERSION
                     );
-                    wp_set_script_translations( 'ttb-admin-help', 'text-typing', TTB_DIR_URL . 'languages' );
+                    wp_set_script_translations( 'ttb-admin-help', 'text-typing', TTB_DIR_PATH . 'languages' );
                 }
             }
 
         }
 
         new TTBPlugin();
+    }
+    if ( TTB_HAS_PRO ) {
+        require_once TTB_DIR_PATH . 'inc/LicenseActivation.php';
     }
 }

@@ -3,8 +3,8 @@ Contributors: bplugins, noornabi2, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text typing, typing animation
 Requires at least: 6.5+
-Tested up to: 6.8
-Stable tag: 2.0.6
+Tested up to: 6.9.3
+Stable tag: 2.0.7
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,7 +15,7 @@ Add stunning animated typing effects to your WordPress headings or text.
 
 The #1 No-Code Typing Text Block Plugin – Trusted by 3000+ Websites Worldwide
 
-[**Typing Text Block**](https://bplugins.com/products/text-typing/) | [**Documentation**](https://bplugins.com/docs/typing-text/) | [**Pricing**](https://bplugins.com/products/text-typing/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/text-typing/#demos)
+[**Typing Text Block**](https://bplugins.com/products/text-typing/) | [**Documentation**](https://bplugins.com/docs/typing-text-block/) | [**Pricing**](https://bplugins.com/products/text-typing/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/text-typing/#demos)
 
 [**Typing Text Block**](https://bplugins.com/products/animated-text-block/) is a powerful and easy-to-use WordPress block that lets you create realistic typing text animations without any coding. Perfect for hero sections, banners, headlines, and call-to-action areas, it helps you highlight key messages in an engaging and modern way.
 
@@ -134,6 +134,10 @@ Please report security bugs found in the source code of the Typing Text – Give
 
 
 == Changelog ==
+
+= 2.0.7 - 15 March 26 =
+- **Fixed**: dataset console error issue fixed.
+- **Update**: applied latest wordpress version.
 
 = 2.0.6 - 28 Feb 26 =
 - **Update**: Lates dashboard implement and rename menu item about shortCode.

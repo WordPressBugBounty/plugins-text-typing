@@ -5,9 +5,15 @@ import { dashboardInfo } from './utils/data';
 
 document.addEventListener('DOMContentLoaded', () => {
   const adminEl = document.getElementById("ttbDashboard");
-  const info = JSON.parse(adminEl.dataset.info);
+  let info = {};
 
-  console.log("hello ami present");
+   try {
+    if (adminEl?.dataset?.info !== undefined || adminEl?.dataset?.info !== "") {
+      info = JSON.parse(adminEl?.dataset?.info);
+    }
+  } catch {
+    console.warn("Not Info")
+  }
 
   React.createRoot(adminEl).render(<App {...dashboardInfo(info)} />)
 

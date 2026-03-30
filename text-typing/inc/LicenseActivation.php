@@ -7,8 +7,8 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
  * License Activation Handler
  * Handles Freemius license activation via AJAX
  */
-if( !class_exists( 'LicenseActivation' ) ){
-	class LicenseActivation {
+if( !class_exists( TTBLicenseActivation::class ) ){
+	class TTBLicenseActivation {
 		private $fs_callable;
 		private $fs;
 
@@ -301,5 +301,5 @@ if( !class_exists( 'LicenseActivation' ) ){
 
 // Initialize only if Freemius is available
 if ( function_exists( 'ttb_fs' ) ) {
-	new LicenseActivation( 'ttb_fs' );
+	new TTBLicenseActivation( 'ttb_fs' );
 }

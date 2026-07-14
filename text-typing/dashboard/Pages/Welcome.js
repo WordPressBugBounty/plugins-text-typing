@@ -1,20 +1,27 @@
-import Overview from '../../../bpl-tools/Admin/Overview';
-import Changelog from '../../../bpl-tools/Admin/Changelog';
-import ProAds from '../../../bpl-tools/Admin/ProAds';
+import Welcome from "../../../bpl-tools/Admin/Welcome";
+import BlocksCard from "../../../bpl-tools/Admin/Blocks/Card";
 
-const Welcome = (props) => {
-	const { isPremium } = props;
+import { welcomeInfo } from "../utils/data";
 
-	return <Overview {...props}>
-		<div style={{
-			display: 'grid',
-			gridTemplateColumns: isPremium ? '1fr' : 'repeat(auto-fill, minmax(min(480px, 100%), 1fr))',
-			gap: '32px'
-		}}>
-			<Changelog {...props} />
+// The canonical Welcome page (hero, getting-started, changelog, pro-ads) with the
+// Blocks card slotted directly beneath the banner/getting-started row via afterHero.
+const WelcomePage = (props) => {
+  const { adminUrl, blocksProps = {} } = props;
 
-			{!isPremium && <ProAds {...props} />}
-		</div>
-	</Overview>
-}
-export default Welcome;
+  return (
+    <Welcome
+      {...props}
+      {...welcomeInfo(adminUrl)}
+      afterHero={
+        <BlocksCard
+          {...props}
+          {...blocksProps}
+          cardTitle="Blocks"
+          seeAllLink="#/blocks"
+        />
+      }
+    />
+  );
+};
+
+export default WelcomePage;

@@ -197,6 +197,13 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
+      version: "2.2.1 - 25 October 2026",
+      type: "fix",
+      list: [
+        "<strong>Fix:</strong> Fixed the typing contents sanitization issue."
+      ],
+    },
+    {
       version: "2.2.0 - 13 Oct 26",
       type: "new",
       list: [
